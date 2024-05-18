@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Output Selction</title>
+    <link rel="stylesheet" href="index2.css" />
+  </head>
+  <body>
+    <div class="navb">
+      <nav>
+        <img src="images/logo.png" alt="logo" />
+        <a href="http://127.0.0.1:5500/Major/index.html">Go Back</a>
+        <a
+          href="https://iotmajor.s3.ap-south-1.amazonaws.com/3+May/data+20+apr.xlsx"
+          >Extract Data</a
+        >
+      </nav>
+    </div>
+
+    <section id="btn">
+      <div class="div1">
+        <h1>Select output you want to analyze:</h1>
+        <div class="div2">
+          <div class="btn1">
+            <button onclick="temp()" class="temp">
+              <b
+                >Temperature
+                <h6>Optimal range: 20 to 30 degree</h6></b
+              >
+            </button>
+            <button onclick="tds()" class="tds">
+              <b
+                >TDS
+                <h6>Optimal range: 100 to 600 ppm</h6>
+              </b>
+            </button>
+          </div>
+          <div class="btn2">
+            <button onclick="ph()" class="ph">
+              <b
+                >Ph
+                <h6>Optimal range: 6.5 to 8.5</h6>
+              </b>
+            </button>
+            <button onclick="wh()" class="wh">
+              <b>ALL</b>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function temp() {
+        window.location.href =
+          "https://public.tableau.com/app/profile/anushka.narkhde/viz/Book2_17148805599940/Sheet1?publish=yes";
+      }
+
+      function tds() {
+        window.location.href =
+          "https://public.tableau.com/app/profile/anushka.narkhde/viz/Book2_17148805599940/Sheet2?publish=yes";
+      }
+
+      function ph() {
+        window.location.href =
+          "https://public.tableau.com/app/profile/anushka.narkhde/viz/Book2_17148805599940/Sheet3?publish=yes";
+      }
+
+      function wh() {
+        window.location.href =
+          "https://public.tableau.com/app/profile/anushka.narkhde/viz/Book2_17148805599940/Sheet4?publish=yes";
+      }
+    </script>
+  </body>
+</html>

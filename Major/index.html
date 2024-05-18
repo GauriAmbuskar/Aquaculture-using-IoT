@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aquaculture Project</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <nav>
+        <img src="images/logo.png" alt="logo" />
+        <a href="#" class="active">HOME</a>
+        <a href="#devices">DEVICES</a>
+        <a href="#about">ABOUT</a>
+        <a href="http://127.0.0.1:5500/Major/index2.html">EXAMINE</a>
+      </nav>
+    </div>
+    <section id="">
+      <div class="hd">
+        <marquee><h1>AQUACULTURE USING IOT DEVICES</h1></marquee>
+      </div>
+      <div class="container">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/1.png" /></div>
+            <div class="swiper-slide"><img src="images/2.png" /></div>
+            <div class="swiper-slide"><img src="images/3.jpg" /></div>
+            <div class="swiper-slide"><img src="images/4.webp" /></div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="devices">
+      <div class="secd"></div>
+      <div class="heading">
+        <h1>Sustainable Aquaculture Solutions</h1>
+        <h4>Guarding Fish Health, testing for quality and saving lives</h4>
+      </div>
+      <div class="wrapper">
+        <div class="cont">
+          <input type="radio" name="slide" id="c1" checked />
+          <label for="c1" class="card">
+            <div class="row">
+              <div class="icon">1</div>
+              <div class="description">
+                <h4>Arduino UNO</h4>
+                <p>Main connection to all sensors</p>
+              </div>
+            </div>
+          </label>
+          <input type="radio" name="slide" id="c2" />
+          <label for="c2" class="card">
+            <div class="row">
+              <div class="icon">2</div>
+              <div class="description">
+                <h4>PH4502C Sensor</h4>
+                <p>To detect ph value of water</p>
+              </div>
+            </div>
+          </label>
+          <input type="radio" name="slide" id="c3" />
+          <label for="c3" class="card">
+            <div class="row">
+              <div class="icon">3</div>
+              <div class="description">
+                <h4>DS18B20</h4>
+                <p>Temperature sensor to detect the temperature of water</p>
+              </div>
+            </div>
+          </label>
+          <input type="radio" name="slide" id="c4" />
+          <label for="c4" class="card">
+            <div class="row">
+              <div class="icon">4</div>
+              <div class="description">
+                <h4>TDS</h4>
+                <p>TDS sensor to detect total solid dissolve</p>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="secd"></div>
+      <div class="ab-heading">
+        <h1>PROJECT OVERVIEW</h1>
+      </div>
+      <ul>
+        <li class="l1">
+          Ensuring pristine conditions: Water Quality Testing for Aquaculture.
+        </li>
+        <li class="l2">
+          We're pioneering the future of aquaculture through innovative IoT
+          projects, harnessing technology to optimize sustainability and
+          productivity in fish farming.
+        </li>
+        <li class="l3">
+          Water quality testing is critical in aquaculture to maintain healthy
+          and thriving aquatic environments. Our comprehensive testing protocols
+          assess parameters like dissolved oxygen, pH and total solids dissolve
+          ensuring optimal conditions for fish growth and overall farm
+          productivity.
+        </li>
+        <li class="l4">
+          Through our innovative aquaculture IoT project, we are revolutionizing
+          sustainable fish production by seamlessly integrating technology with
+          responsible farming practices.
+        </li>
+      </ul>
+      <div class="contributor">
+        <h3>CONTRIBUTORS OF PROJECT<br /></h3>
+        <h4>Guide: Prof. Archana P. Ambhore ( Assistant Professor at GCOEA)</h4>
+        <br />
+        <ul class="name">
+          <li>Anushka Narkhede(20007020)<br />narkhedeanushka18@gcoea.ac.in</li>
+          <li>Gauri Ambuskar(20007024)<br />gauri.ambuskar2@gcoea.ac.in</li>
+          <li>Sanket Bodhe(20007019)<br />sanketbodhe9741@gcoea.ac.in</li>
+          <li>Sakshi Barde(20007033)<br />stbarde123@gcoea.ac.in</li>
+        </ul>
+      </div>
+    </section>
+    <!-- <section id="examine">
+    
+    </section> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      let sections = document.querySelectorAll("section");
+      let navLinks = document.querySelectorAll("header nav a");
+
+      window.onscroll = () => {
+        sections.forEach((sec) => {
+          let top = window.scrollY;
+          let offset = sec.offsetTop;
+          let height = sec.offsetHeight;
+          let id = sec.getAttribute("id");
+
+          if (top >= offset && top < offset + height) {
+            navLinks.forEach((links) => {
+              links.classList.remove("active");
+              document
+                .querySelector("header nav a[href*=" + id + "]")
+                .classList.add("active");
+            });
+          }
+        });
+      };
+    </script>
+  </body>
+</html>
