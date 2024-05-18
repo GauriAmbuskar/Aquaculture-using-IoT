@@ -1,0 +1,2 @@
+An aquaculture IoT project utilizes sensor to collect data on water quality . This data stored in cloud based database, facilating scalable storage and access. A user friendlt front-endapplication enables
+real time monitoring andcontrolling of aquaculture operations. Advance data analytics techniques, including tableau analyze the data to improve overall efficiency and sustainable of aquaculture system.
